@@ -1,0 +1,14 @@
+import random
+
+letters = int(input("How many letters? "))
+symbol = int(input("How many symbols? "))
+numbers = int(input("How many numbers? "))
+
+let = random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') * letters
+sym = random.choice('!@#$%^&*()') * symbol
+num = random.choice('0123456789') * numbers
+
+password = let + sym + num
+password = ''.join(random.sample(password, len(password)))
+
+print("Your generated password is:", password)
